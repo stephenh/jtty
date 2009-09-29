@@ -31,6 +31,8 @@ public class Jtty {
 		Server server = new Server(Integer.parseInt(args[0]));
 		server.setStopAtShutdown(true);
 		server.setHandlers(handlers);
+		server.getConnectors()[0].setHeaderBufferSize(24 * 1024); // for large GET requests, e.g. fakesdb
+		server.setAttribute("org.mortbay.jetty.Request.maxFormContentSize", 0); // for large POST requests
 		server.start();
 	}
 }
