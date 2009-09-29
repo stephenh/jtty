@@ -1,32 +1,31 @@
 <?xml version="1.0"?>
 <project name="jtty" xmlns:ivy="antlib:org.apache.ivy.ant">
-	<import file="ivybootstrap.xml"/>
+  <import file="ivybootstrap.xml"/>
 
-	<target name="retrieve" depends="ivy.bootstrap" description="downloads jars for the project">
-		<ivy:resolve/>
-		<ivy:retrieve pattern="bin/lib/[conf]/[type]s/[artifact].[ext]" conf="*" type="*"/>
-	</target>
+  <target name="retrieve" depends="ivy.bootstrap" description="downloads jars for the project">
+    <ivy:resolve/>
+    <ivy:retrieve pattern="bin/lib/[conf]/[type]s/[artifact].[ext]" conf="*" type="*"/>
+  </target>
 
-	<target name="clean" description="delete the bin directory">
-		<delete dir="bin"/>
-	</target>
+  <target name="clean" description="delete the bin directory">
+    <delete dir="bin"/>
+  </target>
 
-	<target name="compile" depends="retrieve" description="compile src/ to bin/main/">
-		<mkdir dir="bin/main"/>
-		<javac srcdir="src/main/java" destdir="bin/main" debug="true" nowarn="yes" source="1.6" target="1.6" encoding="utf8">
-			<classpath>
-				<fileset dir="bin/lib/default" includes="**/*.jar"/>
-			</classpath>
-		</javac>
-	</target>
+  <target name="compile" depends="retrieve" description="compile src/ to bin/main/">
+    <mkdir dir="bin/main"/>
+    <javac srcdir="src/main/java" destdir="bin/main" debug="true" nowarn="yes" source="1.6" target="1.6" encoding="utf8">
+      <classpath>
+        <fileset dir="bin/lib/default" includes="**/*.jar"/>
+      </classpath>
+    </javac>
+  </target>
 
-	<target name="jar" depends="compile" description="jar bin/main/ into bin/jtty.jar">
-		<jar destfile="bin/jtty.jar" manifest="src/main/resources/manifest.mf">
-			<fileset dir="bin/main" includes="**/*.class"/>
-			<zipfileset src="bin/lib/default/jars/jetty.jar" includes="**/*" />
-			<zipfileset src="bin/lib/default/jars/jetty-util.jar" includes="**/*" />
-			<zipfileset src="bin/lib/default/jars/servlet-api-2.5.jar" includes="**/*" />
-		</jar>
-	</target>
-
+  <target name="jar" depends="compile" description="jar bin/main/ into bin/jtty.jar">
+    <jar destfile="bin/jtty.jar" manifest="src/main/resources/manifest.mf">
+      <fileset dir="bin/main" includes="**/*.class"/>
+      <zipfileset src="bin/lib/default/jars/jetty.jar" includes="**/*" />
+      <zipfileset src="bin/lib/default/jars/jetty-util.jar" includes="**/*" />
+      <zipfileset src="bin/lib/default/jars/servlet-api-2.5.jar" includes="**/*" />
+    </jar>
+  </target>
 </project>
