@@ -25,7 +25,19 @@
       <fileset dir="bin/main" includes="**/*.class"/>
       <zipfileset src="bin/lib/default/jars/jetty.jar" includes="**/*" />
       <zipfileset src="bin/lib/default/jars/jetty-util.jar" includes="**/*" />
-      <zipfileset src="bin/lib/default/jars/servlet-api-2.5.jar" includes="**/*" />
+      <zipfileset src="bin/lib/default/jars/servlet-api.jar" includes="**/*" />
+    </jar>
+    <jar destfile="bin/jttyp.jar" manifest="src/main/resources/manifest.mf">
+      <fileset dir="bin/main" includes="**/*.class"/>
+      <zipfileset src="bin/lib/default/jars/jetty.jar" includes="**/*" />
+      <zipfileset src="bin/lib/default/jars/jetty-util.jar" includes="**/*" />
+      <zipfileset src="bin/lib/default/jars/servlet-api.jar" includes="**/*" />
+      <zipfileset src="bin/lib/default/jars/el-api.jar" includes="**/*" />
+      <zipfileset src="bin/lib/default/jars/jasper.jar" includes="**/*" />
+      <zipfileset src="bin/lib/default/jars/jasper-el.jar" includes="**/*" />
+      <zipfileset src="bin/lib/default/jars/jasper-jdt.jar" includes="**/*" />
+      <zipfileset src="bin/lib/default/jars/jsp-api.jar" includes="**/*" />
+      <zipfileset src="bin/lib/default/jars/juli.jar" includes="**/*" />
     </jar>
   </target>
 </project>
