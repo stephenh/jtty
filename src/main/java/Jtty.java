@@ -1,6 +1,8 @@
 import org.mortbay.jetty.Handler;
 import org.mortbay.jetty.Server;
 import org.mortbay.jetty.webapp.WebAppContext;
+import org.mortbay.jetty.webapp.WebInfConfiguration;
+import org.mortbay.jetty.webapp.WebXmlConfiguration;
 
 public class Jtty {
 	public static void main(String[] args) throws Exception {
@@ -25,6 +27,8 @@ public class Jtty {
 				app.setContextPath(parts[1]);
 				app.setWar(parts[2]);
 			}
+			// Skip TagLibConfiguration because its hits the net
+			app.setConfigurationClasses(new String[] { WebInfConfiguration.class.getName(), WebXmlConfiguration.class.getName() });
 			handlers[i - 1] = app;
 		}
 
