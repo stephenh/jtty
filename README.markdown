@@ -24,8 +24,3 @@ If you want to run this from an Eclipse launch target, just use `Jtty` (no packa
 
 The idea is not to use this in production but in situations where you need to quickly deploy a simple webapp with as little downloads/command line/classpath fiddling as possible.
 
-Notes
-=====
-
-* If you want JSP support, use `jttyp.jar`, which has Jasper included.
-
