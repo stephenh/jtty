@@ -1,5 +1,5 @@
 import org.eclipse.jetty.server.Server;
-import org.eclipse.jetty.server.handler.HandlerList;
+import org.eclipse.jetty.server.handler.ContextHandlerCollection;
 import org.eclipse.jetty.webapp.WebAppContext;
 
 public class Jtty {
@@ -10,7 +10,7 @@ public class Jtty {
 			return;
 		}
 
-		HandlerList handlers = new HandlerList();
+		ContextHandlerCollection handlers = new ContextHandlerCollection();
 		for (int i = 1; i < args.length; i++) {
 			WebAppContext app = new WebAppContext();
 			String[] parts = args[i].split(",");
