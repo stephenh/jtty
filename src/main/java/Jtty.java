@@ -1,3 +1,4 @@
+import org.eclipse.jetty.security.HashLoginService;
 import org.eclipse.jetty.server.Server;
 import org.eclipse.jetty.server.handler.ContextHandlerCollection;
 import org.eclipse.jetty.webapp.WebAppContext;
@@ -26,6 +27,7 @@ public class Jtty {
 				app.setWar(parts[2]);
 			}
 			app.setMaxFormContentSize(0); // for large POST requests
+			app.getSecurityHandler().setLoginService(new HashLoginService());
 			handlers.addHandler(app);
 		}
 
