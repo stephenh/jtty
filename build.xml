@@ -23,35 +23,35 @@
   <target name="jar" depends="compile" description="jar bin/main/ into bin/jtty.jar">
     <jar destfile="bin/jtty.jar" manifest="src/main/resources/manifest.mf">
       <fileset dir="bin/main" includes="**/*.class"/>
-      <zipfileset src="bin/lib/default/jars/jetty-continuation.jar" includes="**/*" />
-      <zipfileset src="bin/lib/default/jars/jetty-http.jar" includes="**/*" />
-      <zipfileset src="bin/lib/default/jars/jetty-io.jar" includes="**/*" />
-      <zipfileset src="bin/lib/default/jars/jetty-security.jar" includes="**/*" />
-      <zipfileset src="bin/lib/default/jars/jetty-server.jar" includes="**/*" />
-      <zipfileset src="bin/lib/default/jars/jetty-servlet.jar" includes="**/*" />
-      <zipfileset src="bin/lib/default/jars/jetty-webapp.jar" includes="**/*" />
-      <zipfileset src="bin/lib/default/jars/jetty-xml.jar" includes="**/*" />
-      <zipfileset src="bin/lib/default/jars/jetty-util.jar" includes="**/*" />
-      <zipfileset src="bin/lib/default/jars/servlet-api.jar" includes="**/*" />
+      <zipfileset src="bin/lib/default/jars/jetty-continuation.jar" includes="**/*" excludes="META-INF/*" />
+      <zipfileset src="bin/lib/default/jars/jetty-http.jar" includes="**/*" excludes="META-INF/*" />
+      <zipfileset src="bin/lib/default/jars/jetty-io.jar" includes="**/*" excludes="META-INF/*" />
+      <zipfileset src="bin/lib/default/jars/jetty-security.jar" includes="**/*" excludes="META-INF/*" />
+      <zipfileset src="bin/lib/default/jars/jetty-server.jar" includes="**/*" excludes="META-INF/*" />
+      <zipfileset src="bin/lib/default/jars/jetty-servlet.jar" includes="**/*" excludes="META-INF/*" />
+      <zipfileset src="bin/lib/default/jars/jetty-webapp.jar" includes="**/*" excludes="META-INF/*" />
+      <zipfileset src="bin/lib/default/jars/jetty-xml.jar" includes="**/*" excludes="META-INF/*" />
+      <zipfileset src="bin/lib/default/jars/jetty-util.jar" includes="**/*" excludes="META-INF/*" />
+      <zipfileset src="bin/lib/default/orbits/javax.servlet.jar" includes="**/*" excludes="META-INF/*" />
     </jar>
     <jar destfile="bin/jttyp.jar" manifest="src/main/resources/manifest.mf">
       <fileset dir="bin/main" includes="**/*.class"/>
-      <zipfileset src="bin/lib/default/jars/jetty-continuation.jar" includes="**/*" />
-      <zipfileset src="bin/lib/default/jars/jetty-http.jar" includes="**/*" />
-      <zipfileset src="bin/lib/default/jars/jetty-io.jar" includes="**/*" />
-      <zipfileset src="bin/lib/default/jars/jetty-security.jar" includes="**/*" />
-      <zipfileset src="bin/lib/default/jars/jetty-server.jar" includes="**/*" />
-      <zipfileset src="bin/lib/default/jars/jetty-servlet.jar" includes="**/*" />
-      <zipfileset src="bin/lib/default/jars/jetty-webapp.jar" includes="**/*" />
-      <zipfileset src="bin/lib/default/jars/jetty-xml.jar" includes="**/*" />
-      <zipfileset src="bin/lib/default/jars/jetty-util.jar" includes="**/*" />
-      <zipfileset src="bin/lib/default/jars/servlet-api.jar" includes="**/*" />
-      <zipfileset src="bin/lib/default/jars/el-api.jar" includes="**/*" />
-      <zipfileset src="bin/lib/default/jars/jasper.jar" includes="**/*" />
-      <zipfileset src="bin/lib/default/jars/jasper-el.jar" includes="**/*" />
-      <zipfileset src="bin/lib/default/jars/jasper-jdt.jar" includes="**/*" />
-      <zipfileset src="bin/lib/default/jars/jsp-api.jar" includes="**/*" />
-      <zipfileset src="bin/lib/default/jars/juli.jar" includes="**/*" />
+      <zipfileset src="bin/lib/default/jars/jetty-continuation.jar" includes="**/*" excludes="META-INF/*" />
+      <zipfileset src="bin/lib/default/jars/jetty-http.jar" includes="**/*" excludes="META-INF/*" />
+      <zipfileset src="bin/lib/default/jars/jetty-io.jar" includes="**/*" excludes="META-INF/*" />
+      <zipfileset src="bin/lib/default/jars/jetty-security.jar" includes="**/*" excludes="META-INF/*" />
+      <zipfileset src="bin/lib/default/jars/jetty-server.jar" includes="**/*" excludes="META-INF/*" />
+      <zipfileset src="bin/lib/default/jars/jetty-servlet.jar" includes="**/*" excludes="META-INF/*" />
+      <zipfileset src="bin/lib/default/jars/jetty-webapp.jar" includes="**/*" excludes="META-INF/*" />
+      <zipfileset src="bin/lib/default/jars/jetty-xml.jar" includes="**/*" excludes="META-INF/*" />
+      <zipfileset src="bin/lib/default/jars/jetty-util.jar" includes="**/*" excludes="META-INF/*" />
+      <zipfileset src="bin/lib/default/orbits/javax.servlet.jar" includes="**/*" excludes="META-INF/*" />
+      <zipfileset src="bin/lib/default/jars/el-api.jar" includes="**/*" excludes="META-INF/*" />
+      <zipfileset src="bin/lib/default/jars/jasper.jar" includes="**/*" excludes="META-INF/*" />
+      <zipfileset src="bin/lib/default/jars/jasper-el.jar" includes="**/*" excludes="META-INF/*" />
+      <zipfileset src="bin/lib/default/jars/jasper-jdt.jar" includes="**/*" excludes="META-INF/*" />
+      <zipfileset src="bin/lib/default/jars/jsp-api.jar" includes="**/*" excludes="META-INF/*" />
+      <zipfileset src="bin/lib/default/jars/juli.jar" includes="**/*" excludes="META-INF/*" />
     </jar>
   </target>
 </project>
