@@ -9,7 +9,7 @@
     <artifact name="jtty-jsp" type="jar" ext="jar" conf="default"/>
   </publications>
   <dependencies defaultconfmapping="default->default;sources->sources">
-    <dependency org="org.eclipse.jetty" name="jetty-webapp" rev="8.1.14.v20131031"/>
+    <dependency org="org.eclipse.jetty" name="jetty-webapp" rev="9.2.1.v20140609"/>
     <dependency org="org.apache.tomcat" name="jasper" rev="6.0.20">
       <exclude org="org.apache.tomcat" module="catalina" />
       <exclude org="org.apache.tomcat" module="servlet-api" />
