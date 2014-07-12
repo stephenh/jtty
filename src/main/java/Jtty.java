@@ -18,7 +18,7 @@ import org.eclipse.jetty.webapp.WebAppContext;
 public class Jtty {
   public static void main(String[] args) throws Exception {
     if (args.length < 2) {
-      System.err.println("Usage: java -jar jtty.jar <port> <location>");
+      System.err.println("Usage: java -jar jtty.jar <port> <locations>...");
       System.err.println(" location = path/to/war | contextPath,path/to/war | virtualHost,contextPath,path/to/war");
       return;
     }
