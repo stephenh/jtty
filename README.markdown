@@ -22,5 +22,5 @@ If you want to do virtual hosts:
 
 If you want to run this from an Eclipse launch target, just use `Jtty` (no package) as the main class and command line arguments like above, e.g. `8080 src/main/webapp`.
 
-The idea is not to use this in production but in situations where you need to quickly deploy a simple webapp with as little downloads/command line/classpath fiddling as possible.
+Jtty should be suitable for use in production; e.g. it tries to pick some sane defaults about pool/thread sizes to balance scaling vs. running out of resources.
 
