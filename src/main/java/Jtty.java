@@ -18,7 +18,7 @@ import org.eclipse.jetty.webapp.WebAppContext;
 public class Jtty {
   public static void main(String[] args) throws Exception {
     if (args.length < 2) {
-      System.err.println("Usage: java -jar jtty.jar <port> <location>");
+      System.err.println("Usage: java -jar jtty.jar <port> <locations>...");
       System.err.println(" location = path/to/war | contextPath,path/to/war | virtualHost,contextPath,path/to/war");
       return;
     }
@@ -47,6 +47,8 @@ public class Jtty {
       app.setMaxFormKeys(200);
       app.setMaxFormContentSize(10485760); // for large POST requests, 10mb
       app.getSecurityHandler().setLoginService(new HashLoginService());
+      app.setInitParameter("org.eclipse.jetty.servlet.Default.dirAllowed", "false");
+      app.setInitParameter("org.eclipse.jetty.servlet.Default.welcomeServlets", "true");
       if (!sessions) {
         app.getSessionHandler().getSessionManager().setSessionTrackingModes(new HashSet<SessionTrackingMode>());
       }
