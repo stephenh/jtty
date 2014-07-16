@@ -47,6 +47,8 @@ public class Jtty {
       app.setMaxFormKeys(200);
       app.setMaxFormContentSize(10485760); // for large POST requests, 10mb
       app.getSecurityHandler().setLoginService(new HashLoginService());
+      app.setInitParameter("org.eclipse.jetty.servlet.Default.dirAllowed", "false");
+      app.setInitParameter("org.eclipse.jetty.servlet.Default.welcomeServlets", "true");
       if (!sessions) {
         app.getSessionHandler().getSessionManager().setSessionTrackingModes(new HashSet<SessionTrackingMode>());
       }
