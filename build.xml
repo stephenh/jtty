@@ -25,6 +25,7 @@
       <fileset dir="bin/main" includes="**/*.class"/>
       <zipfileset src="bin/lib/default/jars/jetty-http.jar" includes="**/*" excludes="META-INF/*" />
       <zipfileset src="bin/lib/default/jars/jetty-io.jar" includes="**/*" excludes="META-INF/*" />
+      <zipfileset src="bin/lib/default/jars/jetty-schemas.jar" includes="**/*" excludes="META-INF/*" />
       <zipfileset src="bin/lib/default/jars/jetty-security.jar" includes="**/*" excludes="META-INF/*" />
       <zipfileset src="bin/lib/default/jars/jetty-server.jar" includes="**/*" excludes="META-INF/*" />
       <zipfileset src="bin/lib/default/jars/jetty-servlet.jar" includes="**/*" excludes="META-INF/*" />
@@ -37,6 +38,7 @@
       <fileset dir="bin/main" includes="**/*.class"/>
       <zipfileset src="bin/lib/default/jars/jetty-http.jar" includes="**/*" excludes="META-INF/*" />
       <zipfileset src="bin/lib/default/jars/jetty-io.jar" includes="**/*" excludes="META-INF/*" />
+      <zipfileset src="bin/lib/default/jars/jetty-schemas.jar" includes="**/*" excludes="META-INF/*" />
       <zipfileset src="bin/lib/default/jars/jetty-security.jar" includes="**/*" excludes="META-INF/*" />
       <zipfileset src="bin/lib/default/jars/jetty-server.jar" includes="**/*" excludes="META-INF/*" />
       <zipfileset src="bin/lib/default/jars/jetty-servlet.jar" includes="**/*" excludes="META-INF/*" />
@@ -44,12 +46,15 @@
       <zipfileset src="bin/lib/default/jars/jetty-xml.jar" includes="**/*" excludes="META-INF/*" />
       <zipfileset src="bin/lib/default/jars/jetty-util.jar" includes="**/*" excludes="META-INF/*" />
       <zipfileset src="bin/lib/default/jars/javax.servlet-api.jar" includes="**/*" excludes="META-INF/*" />
+      <!-- jars below this are only for JSP support -->
+      <zipfileset src="bin/lib/default/jars/apache-jsp.jar" includes="**/*" excludes="META-INF/*" />
       <zipfileset src="bin/lib/default/jars/el-api.jar" includes="**/*" excludes="META-INF/*" />
       <zipfileset src="bin/lib/default/jars/jasper.jar" includes="**/*" excludes="META-INF/*" />
       <zipfileset src="bin/lib/default/jars/jasper-el.jar" includes="**/*" excludes="META-INF/*" />
-      <zipfileset src="bin/lib/default/jars/jasper-jdt.jar" includes="**/*" excludes="META-INF/*" />
+      <zipfileset src="bin/lib/default/jars/ecj.jar" includes="**/*" excludes="META-INF/*" />
       <zipfileset src="bin/lib/default/jars/jsp-api.jar" includes="**/*" excludes="META-INF/*" />
       <zipfileset src="bin/lib/default/jars/juli.jar" includes="**/*" excludes="META-INF/*" />
+      <zipfileset src="bin/lib/default/jars/coyote.jar" includes="**/*" excludes="META-INF/*" />
     </jar>
   </target>
 </project>
